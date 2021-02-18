@@ -1,8 +1,8 @@
 {
   "builders": [{
       "type": "amazon-ebs",
-      "access_key": "AKIAZMP2T2BWL6ZD66PR",
-      "secret_key": "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",
+      "access_key": "AKIA46GTGY4XK5JH5XYM",
+      "secret_key": "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",
       "region": "us-east-1",
       "source_ami_filter": {
           "filters": {
@@ -15,7 +15,7 @@
       },
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "ami_name": "ansible-example",
+      "ami_name": "ansible2-example",
       "force_deregister": true
   }], 
   "_comment": "Note that the ansible playbook runs on the vm on aws, not on the computer running Packer",
