@@ -6,8 +6,8 @@ pipeline {
     environment {
         terraform_version = '0.11.11'
         packer_version = '1.4.3'
-        access_key = 'AKIAZMP2T2BWL6ZD66PR'
-        secret_key = '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'
+        access_key = 'AKIATZLISNFZGCRKUN5S'
+        secret_key = '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'
     }
     stages {
           stage('Install Terraform') {
@@ -40,7 +40,7 @@ pipeline {
           stage('Build AMI') {
                 steps {
                     dir('./packer'){
-                     sh 'ls -la; pwd; packer build template.json'
+                     sh 'packer build template.json'
                     }
                 }
           }
