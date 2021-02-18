@@ -1,13 +1,12 @@
 {
+    "variables": {
+      "aws_access_key": "AKIA4YUW6EUDLRMAGI3M",
+      "aws_secret_key": "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"
+    },
   "builders": [{
       "type": "amazon-ebs",
-      "access_key": "AKIA53K2OFWGPKR6XW7X",
-      "secret_key": "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",
-      "assume_role": {
-        "role_arn"    :  "arn:aws:iam::952061799820:role/PackerRole",
-        "session_name":  "PackerRole",
-        "external_id" :  "952061799820"
-    },
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
       "region": "us-east-1",
       "source_ami_filter": {
           "filters": {
